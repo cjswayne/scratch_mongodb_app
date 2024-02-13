@@ -1,6 +1,8 @@
 /** Setup the Mongoose connection **/
 const mongoose = require('mongoose');
-const DB_URL = process.env.ATLAS_URL;
+// require('dotenv').config(); 
+const DB_URL = process.env.DB_URL;
+console.log('Connecting to DB with URL:', process.env.DB_URL);
 
 
 
