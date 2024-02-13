@@ -1,5 +1,10 @@
 /** Setup the Mongoose connection **/
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://127.0.0.1:27017/first_day_db');
+const DB_URL = process.env.ATLAS_URL;
+
+
+
+
+mongoose.connect(DB_URL);
 
 module.exports = mongoose.connection;

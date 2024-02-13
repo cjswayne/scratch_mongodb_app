@@ -3,6 +3,9 @@
 // Create the express variable
 const express = require('express');
 
+// Connect our process.env to the env file
+require('dotenv').config()
+
 // Import your mongoose connection
 const connection = require('./config/connection');
 
