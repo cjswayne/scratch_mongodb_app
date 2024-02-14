@@ -49,7 +49,11 @@ const userSchema = new Schema({
     required:[true, 'You must enter a password'],
     minLength:[6, 'Your password must be at least 6 characters.']
     
-  }
+  },
+  mumbles: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Mumble'
+  }]
 })
 
 userSchema.pre('save', async function(next){
